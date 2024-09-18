@@ -17,4 +17,4 @@ for i in range(2):
     print(f"Running NER on {input_file}, outputting to {output_file}")
     os.system(command)
 
-print("Stanford NER applied successfully!")
+print("Stanford NER successful!")

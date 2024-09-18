@@ -18,6 +18,6 @@ page = wiki.page(page_name)
 if page.exists():
     with open('wikipedia.txt', 'w') as f:
         f.write(page.text)
-    print(f"Extracted main text from the Wikipedia page for {page_name} successfully!")
+    print(f"Extracted main text from the Wikipedia page for {page_name} successful!")
 else:
     print(f"Wikipedia page for {page_name} not found.")
