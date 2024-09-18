@@ -1,24 +1,22 @@
 import fandom
 
-# Set the wiki to JoJo's Bizarre Adventure
+# Set the wiki to "Jojo"
 fandom.set_wiki("jojo")
 
-# Search for Jonathan Joestar (your character based on the last digit of your student ID)
-search_results = fandom.search("Jonathan Joestar", results=1)
-print(f"Search Results: {search_results}")
+# Search for the character by name (Jonathan Joestar, based on your student ID)
+search_result = fandom.search("Jonathan Joestar", results=1)
+print(f"Search Results: {search_result}")
 
-# Extract the page for Jonathan Joestar
+# Fetch the page of the character
 page = fandom.page(title="Jonathan Joestar")
 
-# Open fanwiki.txt and write the content
-with open("fanwiki.txt", "w", encoding="utf-8") as f:
-    f.write(f"Title: {page.title}\n")
-    f.write(f"URL: {page.url}\n\n")
-    f.write(f"Summary:\n{page.summary}\n\n")
+# Prepare the content to write to fanwiki.txt
+content = f"Title: {page.title}\nURL: {page.url}\n\nSummary:\n{page.summary}\n\nSections:\n"
+sections = "\n".join(page.sections)
+content += sections
 
-    # Writing sections to the file
-    f.write("Sections:\n")
-    for section in page.sections:
-        f.write(f"{section}\n")
+# Write the content to fanwiki.txt, making sure newlines are included
+with open("fanwiki.txt", "w", encoding="utf-8") as file:
+    file.write(content)
 
 print("Data has been written to fanwiki.txt")
