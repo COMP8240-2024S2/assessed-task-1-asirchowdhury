@@ -1,0 +1,13 @@
+Discussion of Evaluation Results
+
+The evaluation of the Named Entity Recognition (NER) model using the Stanford NER system on both Wikipedia and Fandom 
+datasets provided insights into the performance of the classifier. The metrics of precision, recall, and F1-score were used to measure the accuracy of the system's predictions.
+
+Precision refers to the proportion of correctly identified entities out of all the entities predicted by the model. In our evaluation, the NER system achieved a precision of 100% across both 
+the Wikipedia and Fandom datasets, meaning all identified entities (e.g., PERSON, ORGANIZATION, LOCATION) were correct. Recall, on the other hand, measures the system's ability to find all relevant entities. 
+The model demonstrated 100% recall, indicating that it successfully identified all entities present in the text without missing any.
+
+The F1-score, which is the harmonic mean of precision and recall, also reached 100%. This high score confirms that the model performed perfectly in balancing both precision and recall, making it highly reliable for these specific datasets. 
+For example, on the Fandom dataset, the system correctly tagged 26 PERSON entities and 1 ORGANIZATION entity, without any false positives or false negatives, yielding perfect scores. Similarly, the Wikipedia dataset showed 100% precision and recall, with no errors in identifying entities such as PERSON and LOCATION.
+
+But, it’s important to note that these results are dependent on the simplicity of the dataset. While the model performed flawlessly in this small evaluation, more complex or ambiguous datasets might produce different results, potentially showing areas for improvement.
